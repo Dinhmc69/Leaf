@@ -31,7 +31,7 @@ vain. Throttling spawn attempts in suspected spawnproof chunks improves
 performance without noticeably advantaging or disadvantaging the mob farm.
 
 diff --git a/src/main/java/io/papermc/paper/configuration/WorldConfiguration.java b/src/main/java/io/papermc/paper/configuration/WorldConfiguration.java
-index 8e65586182bd586c95b8c4873fab6d6ff5975243..ed687b0ab589fd2ddb8bf77f42ba42cf8b1c2ea7 100644
+index a457584fcdc062d16414973228f0f0ef387dfb6e..7100a3fce29ef0cbbdb3659835a0896e168c5803 100644
 --- a/src/main/java/io/papermc/paper/configuration/WorldConfiguration.java
 +++ b/src/main/java/io/papermc/paper/configuration/WorldConfiguration.java
 @@ -183,6 +183,17 @@ public class WorldConfiguration extends ConfigurationPart {

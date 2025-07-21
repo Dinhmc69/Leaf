@@ -5,10 +5,10 @@ Subject: [PATCH] optimize waypoint
 
 
 diff --git a/net/minecraft/world/entity/Entity.java b/net/minecraft/world/entity/Entity.java
-index bdac75d6c9805af0363d2d183330318ca2ff82da..2b29b0e5334ad9f8b3768e9b198565f093c6d3a4 100644
+index df82e0c8ba9e3dc0a75097faafdd8f2f07ca6f4c..384de014fce5bba37c2e70940a27fbee4afbd94c 100644
 --- a/net/minecraft/world/entity/Entity.java
 +++ b/net/minecraft/world/entity/Entity.java
-@@ -5144,6 +5144,7 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
+@@ -5117,6 +5117,7 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
              return;
          }
          // Paper end - Block invalid positions and bounding box
@@ -16,7 +16,7 @@ index bdac75d6c9805af0363d2d183330318ca2ff82da..2b29b0e5334ad9f8b3768e9b198565f0
          if (this.position.x != x || this.position.y != y || this.position.z != z) {
              synchronized (this.posLock) { // Paper - detailed watchdog information
              this.position = new Vec3(x, y, z);
-@@ -5151,7 +5152,8 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
+@@ -5124,7 +5125,8 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
              int floor = Mth.floor(x);
              int floor1 = Mth.floor(y);
              int floor2 = Mth.floor(z);
@@ -26,7 +26,7 @@ index bdac75d6c9805af0363d2d183330318ca2ff82da..2b29b0e5334ad9f8b3768e9b198565f0
                  this.blockPosition = new BlockPos(floor, floor1, floor2);
                  this.inBlockState = null;
                  if (SectionPos.blockToSectionCoord(floor) != this.chunkPosition.x || SectionPos.blockToSectionCoord(floor2) != this.chunkPosition.z) {
-@@ -5160,7 +5162,7 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
+@@ -5133,7 +5135,7 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
              }
  
              this.levelCallback.onMove();

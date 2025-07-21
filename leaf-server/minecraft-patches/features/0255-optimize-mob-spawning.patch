@@ -26,7 +26,7 @@ index 5c369b3d94e369c3f240821ad90b9d96223f24ca..9803c395fce103cb7bc746f43a017ff9
       }
      // Paper end - Optional per player mob spawns
 diff --git a/net/minecraft/server/level/ServerChunkCache.java b/net/minecraft/server/level/ServerChunkCache.java
-index 46e171ca454253c32e22c0c18587e9a7ba19f331..43156ecde8bb86c77f3b13c17b3330eae95efcc3 100644
+index 8f41326fda8c5f9f6926038508be6c6529b051bc..a58a343bba06bfe589567fabd6300f0333f0c5ca 100644
 --- a/net/minecraft/server/level/ServerChunkCache.java
 +++ b/net/minecraft/server/level/ServerChunkCache.java
 @@ -70,11 +70,11 @@ public class ServerChunkCache extends ChunkSource implements ca.spottedleaf.moon
@@ -192,10 +192,10 @@ index 46e171ca454253c32e22c0c18587e9a7ba19f331..43156ecde8bb86c77f3b13c17b3330ea
              }
          }
 diff --git a/net/minecraft/server/level/ServerLevel.java b/net/minecraft/server/level/ServerLevel.java
-index eb5e1e67db2ee1bdbedfa244088fcb7a9356bae3..5e1f29af864df93856eabccde05a98f5acbdd505 100644
+index 9e932a78203d50ba84b2572ca2ef155574a943ae..753e924a1ee7ebf9ccb919e19ec3c1864056bf38 100644
 --- a/net/minecraft/server/level/ServerLevel.java
 +++ b/net/minecraft/server/level/ServerLevel.java
-@@ -1108,6 +1108,7 @@ public class ServerLevel extends Level implements ServerEntityGetter, WorldGenLe
+@@ -969,6 +969,7 @@ public class ServerLevel extends Level implements ServerEntityGetter, WorldGenLe
      private int currentIceAndSnowTick = 0; protected void resetIceAndSnowTick() { this.currentIceAndSnowTick = this.simpleRandom.nextInt(16); } // Gale - Airplane - optimize random calls in chunk ticking
  
      public final org.dreeam.leaf.world.DespawnMap despawnMap = new org.dreeam.leaf.world.DespawnMap(paperConfig()); // Leaf - optimize despawn
@@ -617,7 +617,7 @@ index 11c7c299d4affb9e78488590e7db939efe6e3dd9..a89c61aac1f1a35dc8c5943c0002661c
          RegistryAccess registryAccess,
          ChunkGeneratorStructureState structureState,
 diff --git a/net/minecraft/world/level/entity/EntityTickList.java b/net/minecraft/world/level/entity/EntityTickList.java
-index 5a90b3bffeeb08a168b370e49d18c5f8b257a980..ba173bc1751c495e6fa497566b5ed3c7a9547364 100644
+index 0d64c990730af37abaca10b7c9f840342a0ee7bd..423779a2b690f387a4f0bd07b97b50e0baefda76 100644
 --- a/net/minecraft/world/level/entity/EntityTickList.java
 +++ b/net/minecraft/world/level/entity/EntityTickList.java
 @@ -9,7 +9,7 @@ import javax.annotation.Nullable;
@@ -627,5 +627,5 @@ index 5a90b3bffeeb08a168b370e49d18c5f8b257a980..ba173bc1751c495e6fa497566b5ed3c7
 -    public final ca.spottedleaf.moonrise.common.list.IteratorSafeOrderedReferenceSet<net.minecraft.world.entity.Entity> entities = new ca.spottedleaf.moonrise.common.list.IteratorSafeOrderedReferenceSet<>(org.dreeam.leaf.config.modules.async.AsyncMobSpawning.enabled); // Paper - rewrite chunk system // Pufferfish - private->public and do thread check
 +    private final ca.spottedleaf.moonrise.common.list.IteratorSafeOrderedReferenceSet<net.minecraft.world.entity.Entity> entities = new ca.spottedleaf.moonrise.common.list.IteratorSafeOrderedReferenceSet<>(); // Paper - rewrite chunk system
  
-     // Leaf start - SparklyPaper - parallel world ticking mod
-     // preserve original constructor
+     private void ensureActiveIsNotIterated() {
+         // Paper - rewrite chunk system

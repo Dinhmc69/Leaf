@@ -5,7 +5,7 @@ Subject: [PATCH] Optimize BlockEntities tickersInLevel
 
 
 diff --git a/net/minecraft/world/level/chunk/LevelChunk.java b/net/minecraft/world/level/chunk/LevelChunk.java
-index 514a918fff9bf60293fbfa6def4a2f9fead30825..a3674ddb883eecb255279375a5e2eece7e016c0f 100644
+index d48c52c33f1927a01ab9cb7f35d265319a92cddd..fa35dde5e1ac727ca7fe4e43a52efde64a2f6263 100644
 --- a/net/minecraft/world/level/chunk/LevelChunk.java
 +++ b/net/minecraft/world/level/chunk/LevelChunk.java
 @@ -75,7 +75,7 @@ public class LevelChunk extends ChunkAccess implements ca.spottedleaf.moonrise.p

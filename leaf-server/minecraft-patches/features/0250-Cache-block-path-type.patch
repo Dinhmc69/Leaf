@@ -5,10 +5,10 @@ Subject: [PATCH] Cache block path type
 
 
 diff --git a/net/minecraft/server/dedicated/DedicatedServer.java b/net/minecraft/server/dedicated/DedicatedServer.java
-index 168fc4fea371dfe9ea1ffca3c9f290ba3547f0b9..463a9d9b15301e7139bd36435214662aa3ccf63d 100644
+index 0865399be188c7fc28b36e0ae159961a4445dedd..63553300e3c59baef7223c72f4da2827fa40b174 100644
 --- a/net/minecraft/server/dedicated/DedicatedServer.java
 +++ b/net/minecraft/server/dedicated/DedicatedServer.java
-@@ -366,6 +366,7 @@ public class DedicatedServer extends MinecraftServer implements ServerInterface
+@@ -360,6 +360,7 @@ public class DedicatedServer extends MinecraftServer implements ServerInterface
              }
  
              if (org.dreeam.leaf.config.modules.async.AsyncMobSpawning.enabled) mobSpawnExecutor.start(); // Pufferfish

@@ -8,7 +8,7 @@ Integrated with Imanity Software's Raytrace AntiXray for better performance
 Original project: https://github.com/Imanity-Software/raytrace-antixray-spigot-sdk
 
 diff --git a/net/minecraft/server/level/ServerPlayerGameMode.java b/net/minecraft/server/level/ServerPlayerGameMode.java
-index c4a4f08272b34f72dea4feaaeb66d153b2aab8c8..be5da5a81246b4f4abe19f7c0cf68990d6bdf5bd 100644
+index d638821595138ef972163925136eb57207b31719..02c02314a4a6a7a6da427f0d064dbc61ce92301d 100644
 --- a/net/minecraft/server/level/ServerPlayerGameMode.java
 +++ b/net/minecraft/server/level/ServerPlayerGameMode.java
 @@ -296,6 +296,12 @@ public class ServerPlayerGameMode {
@@ -25,10 +25,10 @@ index c4a4f08272b34f72dea4feaaeb66d153b2aab8c8..be5da5a81246b4f4abe19f7c0cf68990
      }
  
 diff --git a/net/minecraft/world/level/Level.java b/net/minecraft/world/level/Level.java
-index a2abfc5db556bc9a80098a675545f67907a8886b..523b068b99236845e2b87361f72494582e6dd894 100644
+index 160e926c2613a7000ac247066474dafa5811247d..bcea4f65dc067029c19279a1c5b5f2e552606890 100644
 --- a/net/minecraft/world/level/Level.java
 +++ b/net/minecraft/world/level/Level.java
-@@ -1178,6 +1178,12 @@ public abstract class Level implements LevelAccessor, UUIDLookup<Entity>, AutoCl
+@@ -1175,6 +1175,12 @@ public abstract class Level implements LevelAccessor, UUIDLookup<Entity>, AutoCl
                  snapshot.setFlags(flags); // Paper - always set the flag of the most recent call to mitigate issues with multiple update at the same pos with different flags
              }
              BlockState blockState = chunkAt.setBlockState(pos, state, flags);

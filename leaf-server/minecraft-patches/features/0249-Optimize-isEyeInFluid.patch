@@ -79,10 +79,10 @@ index 6c7edbbf3935c40ccb78bee680ea75431718b9bd..fd2f79d976c9587b00380f8b8f784b32
          public String toString() {
              return "Reference{" + this.key + "=" + this.value + "}";
 diff --git a/net/minecraft/server/level/ServerPlayer.java b/net/minecraft/server/level/ServerPlayer.java
-index 158859a2c87d242d5c51e7ca10362d78c5c46c1f..a16607c165965a7c325909ded75a3cf65440f6f7 100644
+index eb26012d431b7c9c9ae3c3702ef879b49dbcea86..4fe99b883934a6dcde7783814ff1eb9539d03455 100644
 --- a/net/minecraft/server/level/ServerPlayer.java
 +++ b/net/minecraft/server/level/ServerPlayer.java
-@@ -1913,7 +1913,7 @@ public class ServerPlayer extends Player implements ca.spottedleaf.moonrise.patc
+@@ -1897,7 +1897,7 @@ public class ServerPlayer extends Player implements ca.spottedleaf.moonrise.patc
                      this.awardStat(Stats.SWIM_ONE_CM, rounded);
                      this.causeFoodExhaustion(this.level().spigotConfig.swimMultiplier * (float) rounded * 0.01F, org.bukkit.event.entity.EntityExhaustionEvent.ExhaustionReason.SWIM); // CraftBukkit - EntityExhaustionEvent // Spigot
                  }
@@ -92,7 +92,7 @@ index 158859a2c87d242d5c51e7ca10362d78c5c46c1f..a16607c165965a7c325909ded75a3cf6
                  if (rounded > 0) {
                      this.awardStat(Stats.WALK_UNDER_WATER_ONE_CM, rounded);
 diff --git a/net/minecraft/world/entity/Entity.java b/net/minecraft/world/entity/Entity.java
-index dc591c4f10ab527af5e5da51fc5ced8afe6364f7..bdac75d6c9805af0363d2d183330318ca2ff82da 100644
+index 594f997dd230da920631bf7d4fb8fc1ec3b56390..df82e0c8ba9e3dc0a75097faafdd8f2f07ca6f4c 100644
 --- a/net/minecraft/world/entity/Entity.java
 +++ b/net/minecraft/world/entity/Entity.java
 @@ -288,7 +288,14 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
