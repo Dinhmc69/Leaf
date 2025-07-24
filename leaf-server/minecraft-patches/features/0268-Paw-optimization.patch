@@ -132,7 +132,7 @@ index 1e7d2eb28bb7b9f3adf1c7979952fdfd2bcd9ea9..67176cb3e3413bd4c7cd6ac5b8310ed5
  
      private void tickPassenger(Entity ridingEntity, Entity passengerEntity, final boolean isActive) { // Paper - EAR 2
 diff --git a/net/minecraft/world/entity/Entity.java b/net/minecraft/world/entity/Entity.java
-index 384de014fce5bba37c2e70940a27fbee4afbd94c..7a9394d88ab1c9372ddf2ee670be6af5ac1d921d 100644
+index b10bb1c70c9cd07a44b7320ad843a800bdbdf980..eaa8e82a12f8fa1a06775c66de0a5481e2972629 100644
 --- a/net/minecraft/world/entity/Entity.java
 +++ b/net/minecraft/world/entity/Entity.java
 @@ -1170,16 +1170,6 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess

@@ -11,7 +11,7 @@ Subject: [PATCH] optimize checkInsideBlocks calls
 License: LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.html)
 
 diff --git a/net/minecraft/world/entity/Entity.java b/net/minecraft/world/entity/Entity.java
-index 7a9394d88ab1c9372ddf2ee670be6af5ac1d921d..ae02ceb388023f331ed32c5a822ce08a717dd55c 100644
+index eaa8e82a12f8fa1a06775c66de0a5481e2972629..cae1294a58f40b6eee32b106ce646ec3c5c1a991 100644
 --- a/net/minecraft/world/entity/Entity.java
 +++ b/net/minecraft/world/entity/Entity.java
 @@ -1733,8 +1733,13 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess

@@ -41,7 +41,7 @@ index b02826fc7390eb1fd7c2a1b597a5f1abf156b1c1..736563bd3a462911ec99a8158fc5bd3e
          this.perm.recalculatePermissions();
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-index 0f085618f6866bef1a526c6404f92e26f7bef0fd..f044acf8862642231369fc81af56d0b018be1d50 100644
+index bccd053fd13c9e683fc0cd8a7170632564b998d8..5110d79cf0f14500fb359ae4a4a0d5617362fba0 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 @@ -389,6 +389,11 @@ public class CraftPlayer extends CraftHumanEntity implements Player, PluginMessa

@@ -19,7 +19,7 @@ index 5307e80f6e84df7a053e7132883d8338bbd751a0..d6be86981219f0fe0db15d36d9c85e9a
          // Leaf end - Only player pushable
          if (!pushableEntities.isEmpty()) {
 diff --git a/net/minecraft/world/level/Level.java b/net/minecraft/world/level/Level.java
-index 91c72553c4e709c84d7591f35c4a3d34029309bf..4a1226e5244fe859e223f99b8aab55fb3b1fb17c 100644
+index 9e67c24b39ba5a3678864bf4e2cd7ee6500e2860..b9d8ea3f478d5bc56f7cc9d12c731cbbf4c974f1 100644
 --- a/net/minecraft/world/level/Level.java
 +++ b/net/minecraft/world/level/Level.java
 @@ -1898,7 +1898,7 @@ public abstract class Level implements LevelAccessor, UUIDLookup<Entity>, AutoCl

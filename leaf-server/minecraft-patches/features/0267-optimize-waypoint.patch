@@ -5,11 +5,7 @@ Subject: [PATCH] optimize waypoint
 
 
 diff --git a/net/minecraft/world/entity/Entity.java b/net/minecraft/world/entity/Entity.java
-<<<<<<<< HEAD:leaf-server/minecraft-patches/features/0268-optimize-waypoint.patch
-index df82e0c8ba9e3dc0a75097faafdd8f2f07ca6f4c..384de014fce5bba37c2e70940a27fbee4afbd94c 100644
-========
-index e054c2416919fe8814412e6e06cd82e4ea537c84..a253d714670f932d67e2c44fdf895716b6b595ec 100644
->>>>>>>> ver/1.21.8:leaf-server/minecraft-patches/features/0269-optimize-waypoint.patch
+index 2a2299d42a9270a355df74bfeaa24ade0cd44649..b10bb1c70c9cd07a44b7320ad843a800bdbdf980 100644
 --- a/net/minecraft/world/entity/Entity.java
 +++ b/net/minecraft/world/entity/Entity.java
 @@ -5117,6 +5117,7 @@ public abstract class Entity implements SyncedDataHolder, Nameable, EntityAccess
