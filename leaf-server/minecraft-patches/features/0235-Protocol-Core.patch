@@ -22,10 +22,10 @@ index 56fd1ed7ccaf96e7eedea60fbdbf7f934939d563..d2f522ea6d0a209496848af073c9af1c
              }
  
 diff --git a/net/minecraft/server/MinecraftServer.java b/net/minecraft/server/MinecraftServer.java
-index b3ed38c0bb769c2850374f5ed9d3f4fe002e516f..b5a532305c561668850ce8a8a3f520cde805a14f 100644
+index 9a68042d1efb0da915fc2a302641c9ea6d92f582..225d1604baa2a2c974de5c3ae45d3afd3c7d31df 100644
 --- a/net/minecraft/server/MinecraftServer.java
 +++ b/net/minecraft/server/MinecraftServer.java
-@@ -1742,6 +1742,7 @@ public abstract class MinecraftServer extends ReentrantBlockableEventLoop<TickTa
+@@ -1804,6 +1804,7 @@ public abstract class MinecraftServer extends ReentrantBlockableEventLoop<TickTa
          }
  
          org.leavesmc.leaves.protocol.core.LeavesProtocolManager.handleTick(tickCount); // Leaves - protocol
@@ -34,10 +34,10 @@ index b3ed38c0bb769c2850374f5ed9d3f4fe002e516f..b5a532305c561668850ce8a8a3f520cd
          for (int i = 0; i < this.tickables.size(); i++) {
              this.tickables.get(i).run();
 diff --git a/net/minecraft/server/level/ServerPlayer.java b/net/minecraft/server/level/ServerPlayer.java
-index 567187499c29fbd159b472278665a824dbb1cfd6..1498b528cf3bcef967dadd4b07d781000dc922ec 100644
+index 0314abb98efa62c16363bfc60a24c5db62dc3736..7c3cb3374e0827021b7accf2235ce9d410eaa1d6 100644
 --- a/net/minecraft/server/level/ServerPlayer.java
 +++ b/net/minecraft/server/level/ServerPlayer.java
-@@ -805,6 +805,7 @@ public class ServerPlayer extends Player implements ca.spottedleaf.moonrise.patc
+@@ -806,6 +806,7 @@ public class ServerPlayer extends Player implements ca.spottedleaf.moonrise.patc
              }
          }
          // Purpur end - Ridables
@@ -46,10 +46,10 @@ index 567187499c29fbd159b472278665a824dbb1cfd6..1498b528cf3bcef967dadd4b07d78100
  
      private void updatePlayerAttributes() {
 diff --git a/net/minecraft/server/network/ServerCommonPacketListenerImpl.java b/net/minecraft/server/network/ServerCommonPacketListenerImpl.java
-index 7f4257870c5fca902403e246b9ce569b20dbb364..70eb3ea8094bbbd460452935f62579b027a7925f 100644
+index 84030c40f2f91b433b3ccd21e0367d2f8b7c97b6..03cd2af813c3cca167b07115f03f6b5eae6d4185 100644
 --- a/net/minecraft/server/network/ServerCommonPacketListenerImpl.java
 +++ b/net/minecraft/server/network/ServerCommonPacketListenerImpl.java
-@@ -176,6 +176,12 @@ public abstract class ServerCommonPacketListenerImpl implements ServerCommonPack
+@@ -190,6 +190,12 @@ public abstract class ServerCommonPacketListenerImpl implements ServerCommonPack
  
          net.minecraft.network.protocol.PacketUtils.ensureRunningOnSameThread(packet, this, this.server);
  
@@ -63,10 +63,10 @@ index 7f4257870c5fca902403e246b9ce569b20dbb364..70eb3ea8094bbbd460452935f62579b0
          final byte[] data = discardedPayload.data();
          try {
 diff --git a/net/minecraft/server/players/PlayerList.java b/net/minecraft/server/players/PlayerList.java
-index 4a708ae9772eb23c037b194b1ff7780a8ba47804..5122f9239e08d5ede7a21bf65d81f5ffc96a66b4 100644
+index bdc3ee44125ab070fb432a90cf1b02b009ba31ad..fd6e21416bb0b82ae6b1f602a168069558f9ad93 100644
 --- a/net/minecraft/server/players/PlayerList.java
 +++ b/net/minecraft/server/players/PlayerList.java
-@@ -688,6 +688,7 @@ public abstract class PlayerList {
+@@ -689,6 +689,7 @@ public abstract class PlayerList {
      }
      public @Nullable net.kyori.adventure.text.Component remove(ServerPlayer player, net.kyori.adventure.text.Component leaveMessage) {
          org.leavesmc.leaves.protocol.core.LeavesProtocolManager.handlePlayerLeave(player); // Leaves - protocol
